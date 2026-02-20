@@ -1,6 +1,6 @@
 # Catty 🐱
 
-A simple web app that uses Google's Gemma 3 4B AI model to suggest names for your cat based on an uploaded photo.
+A simple web app that uses AI to suggest names for your cat based on an uploaded photo.
 
 ## Project Structure
 
