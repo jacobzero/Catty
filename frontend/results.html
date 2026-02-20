@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catty · Your Cat’s New Names</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="landing-body">
+
+  <div class="results-confetti" aria-hidden="true">
+    <span class="confetti-piece confetti-piece--1"></span>
+    <span class="confetti-piece confetti-piece--2"></span>
+    <span class="confetti-piece confetti-piece--3"></span>
+    <span class="confetti-piece confetti-piece--4"></span>
+    <span class="confetti-piece confetti-piece--5"></span>
+    <span class="confetti-piece confetti-piece--6"></span>
+    <span class="confetti-piece confetti-piece--7"></span>
+    <span class="confetti-piece confetti-piece--8"></span>
+    <span class="confetti-piece confetti-piece--9"></span>
+    <span class="confetti-piece confetti-piece--10"></span>
+    <span class="confetti-piece confetti-piece--11"></span>
+    <span class="confetti-piece confetti-piece--12"></span>
+    <span class="confetti-piece confetti-piece--13"></span>
+    <span class="confetti-piece confetti-piece--14"></span>
+    <span class="confetti-piece confetti-piece--15"></span>
+    <span class="confetti-piece confetti-piece--16"></span>
+    <span class="confetti-piece confetti-piece--17"></span>
+    <span class="confetti-piece confetti-piece--18"></span>
+    <span class="confetti-piece confetti-piece--19"></span>
+    <span class="confetti-piece confetti-piece--20"></span>
+    <span class="confetti-piece confetti-piece--21"></span>
+    <span class="confetti-piece confetti-piece--22"></span>
+    <span class="confetti-piece confetti-piece--23"></span>
+    <span class="confetti-piece confetti-piece--24"></span>
+  </div>
+
+  <!-- Background -->
+  <div class="landing-bg" aria-hidden="true">
+    <img src="./happy.png" alt="" class="landing-bg-img proc-bg-img" />
+    <div class="landing-bg-overlay proc-bg-overlay"></div>
+  </div>
+
+  <!-- Logo -->
+  <div class="landing-wordmark">🐱 Catty</div>
+
+  <main class="res-hero">
+
+    <div id="results-error" class="proc-error-card is-hidden">
+      <div class="proc-error-icon">😿</div>
+      <h2 class="proc-error-title">We could not name this cat</h2>
+      <p id="results-error-message" class="proc-error-message">
+        Something went wrong.
+      </p>
+      <a href="index.html" class="proc-retry-btn">Try again →</a>
+    </div>
+
+    <div class="res-content">
+      <div class="res-photo-wrap">
+        <img id="result-photo" class="res-photo" alt="Your cat" />
+      </div>
+
+      <h1 class="landing-heading res-heading">
+        Meet <em>your cat.</em>
+      </h1>
+
+      <ul id="results-name-list" class="res-name-list">
+        <!-- Filled by script.js -->
+      </ul>
+
+      <div class="res-actions">
+        <a href="index.html" class="landing-cta res-cta">Name another cat 🐱</a>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

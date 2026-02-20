@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catty · Purrfect Name Finder</title>
+  <meta name="description"
+    content="Upload a photo of your cat and let AI suggest the purrfect name. Free, instant, and surprisingly accurate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="landing-body">
+
+  <!-- Background -->
+  <div class="landing-bg" aria-hidden="true">
+    <img src="./hero-bg.png" alt="" class="landing-bg-img" />
+    <div class="landing-bg-overlay"></div>
+  </div>
+
+  <!-- Logo -->
+  <div class="landing-wordmark">🐱 Catty</div>
+
+  <!-- JS hook: keeps initWelcomePage() running; interaction is via the upload zone -->
+  <button id="upload-button" class="file-input-hidden" aria-hidden="true" tabindex="-1"></button>
+  <input id="cat-input" type="file" accept="image/*" class="file-input-hidden" />
+
+  <!-- Hero -->
+  <main class="landing-hero">
+
+
+    <h1 class="landing-heading">
+      <em>Name</em> your cat
+    </h1>
+
+    <p class="landing-subheading">
+      Upload a single photo and Catty suggests 4 purrfect names,<br class="landing-br" />
+      tailored to your cat's unique look and vibe.
+    </p>
+
+    <!-- Upload zone / Preview -->
+    <div class="landing-upload-zone" id="landing-upload-zone">
+      <span class="landing-upload-placeholder" id="preview-placeholder">
+        <span class="landing-upload-icon">📷</span>
+        <span>Drop a cat photo here, or <span class="landing-upload-link">browse</span></span>
+      </span>
+      <img id="cat-preview" class="preview-img landing-preview-img" alt="Preview of your cat" />
+    </div>
+
+    <!-- The CTA now sits below the drop zone -->
+    <button id="name-button" class="landing-cta btn-hidden" type="button">Name my cat →</button>
+
+    <p class="landing-tagline">Snap. Upload. Get named.</p>
+
+    <p class="landing-badge landing-badge--footer">🐾 AI-powered cat naming</p>
+  </main>
+
+  <script src="./script.js"></script>
+
+  <!-- Make the upload zone clickable too -->
+  <script>
+    document.getElementById("landing-upload-zone").addEventListener("click", function () {
+      var inp = document.getElementById("cat-input");
+      if (inp && !document.getElementById("cat-preview").classList.contains("has-image")) {
+        inp.click();
+      }
+    });
+  </script>
+</body>
+
+</html>
